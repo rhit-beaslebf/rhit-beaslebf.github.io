@@ -1,15 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Noto+Nastaliq+Urdu:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Noto+Nastaliq+Urdu:wght@400..700&display=swap');
+
 :root{
     --vertical-space: 2rem;
     --horizontal-space: 3rem;
+
+    --light-color:#D5D0C4;
+    --heading-color:#44474D;
+    --body-color:#6C6B68;
+    --contrast-color:156,165,177;
 }
 
 body{
     font-size: 18px;
     line-height: 1.5;
+    font-family: "Jost", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--body-color);
+    background-color: var(--light-color);
+}
+
+main{
+    background-color: rgba(var(--contrast-color), 0.3);
 }
 
 h1,h2,h3 {
     line-height: 1.2;
+    font-family: "Crimson Pro", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    color: var(--heading-color);
+}
+
+a{
+    color: var(--body-color);
+    text-decoration-color: var(--contrast-color);
+}
+
+a:hover{
+    color: var(--contrast-color);
 }
 
 body#about img {height: 15em;}
