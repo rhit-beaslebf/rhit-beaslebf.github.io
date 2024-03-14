@@ -1,3 +1,8 @@
+:root{
+    --vertical-space: 2rem;
+    --horizontal-space: 3rem;
+}
+
 body{
     font-size: 18px;
     line-height: 1.5;
@@ -8,8 +13,6 @@ h1,h2,h3 {
 }
 
 body#about img {height: 15em;}
-
-body#portfolio {height: 25em;}
 
 p {
     max-width: 50em;
@@ -24,8 +27,17 @@ body{
     grid-template-rows: auto 1fr auto;
 }
 
+@media screen and (min-width: 20em){
+    body{
+        grid-template-areas: "head head"
+                             "nav main"
+                             "foot foot";
+    }
+}
+
 body > * {
-    padding-left: 4rem;
+    padding-left: var(--horizontal-space);
+    padding-right: var(--horizontal-space);
 }
 
 body > header{
@@ -41,12 +53,6 @@ body > nav ul{
     padding: 0;
 }
 
-body > nav ul li {
-    display: inline;
-    padding-right: 1rem;
-
-}
-
 
 body > main{
     grid-area:main;
@@ -57,10 +63,30 @@ body > footer{
 }
 
 header, footer{
-    padding-top: 1.33rem;
-    padding-bottom: 1.33rem;
+    padding-top: var(--vertical-space);
+    padding-bottom: var(--vertical-space);
 }
 
 header h1, footer h1{
     margin: 0;
 }
+
+body#portfolio ul#portfolioItems{
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    list-style-type: none;
+    padding: 0;
+}
+
+@media screen and (min-width: 25em){
+    body#portfolio ul#portfolioItems li{
+        flex-basis: 48%;
+        padding-right: 2%;
+    }
+}
+
+body#portfolio ul#portfolioItems li img{
+    max-width: 100%;
+}
+
