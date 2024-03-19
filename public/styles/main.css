@@ -49,9 +49,9 @@ a:hover{
 }
 
 body#about img {
-    height: 20em;
+    height: 17em;
     display: inline;
-    margin-bottom: var(--vertical-space);
+    margin-bottom: 0;
 }
 
 body{
@@ -80,6 +80,8 @@ body{
     }
 
     body#about img{
+        height: 20em;
+        display: inline;
         float: right;
         margin-left: var(--horizontal-space);
         margin-bottom: var(--vertical-space);
@@ -92,6 +94,8 @@ body{
     body#resume > main{
         max-width: 50em;
     }
+
+
 }
 
 body > * {
@@ -168,12 +172,21 @@ body#portfolio img{
     }
 }
 
+@media screen and (min-width: 100em){
+    body#portfolio img{
+        min-height: 24em;
+    }
+}
+
+
+
 
 @media screen and (min-width: 25em) and (max-width: 50em){
     body#portfolio h2#linter{
         margin-bottom: 55px;
     }
 }
+
 
 
 
